@@ -1,0 +1,10 @@
+#Folders
+.vscode/
+__pycache__/
+
+#
+*.db
+
+#Specific files
+coure_notes.md
+to-populate-db.py

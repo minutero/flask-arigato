@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}
+    Register Page
+{% endblock %}
+
+{% block content %}
+<body class='text-center'>
+    <div class='container'>
+        <form method="POST" class='form-register'>
+            {{ form.hidden_tag() }}
+            <img class="mb-4" src="https://ih1.redbubble.net/image.676433494.8846/flat,128x128,075,f-pad,128x128,f8f8f8.u4.jpg">
+            <img class="mb-4" src="images/android-chrome-192x192.jpg">
+            <h1 class='h3 mb-3 font-wieght-normal'>Please Create your Account</h1>
+            <br>            
+            {{ form.username(class='form-control', placeholder='User Name') }}
+            <br>
+            {{ form.email_address(class='form-control', placeholder='Email Address') }}
+            <br>            
+            {{ form.password1(class='form-control', placeholder='Password') }}
+            <br>
+            {{ form.password2(class='form-control', placeholder='Confirm Password') }}
+            <br>
+            <div class="checkbox mb-3">
+                <h6>Already have an account?</h6>
+                <a class="btn btn-sm btn-secondary" href="{{ url_for('login_page') }}">Sign In</a>
+             </div>
+            {{ form.submit(class='btn btn-lg btn-dark', placeholder='Confirm Password') }}
+        </form>
+    </div>
+</body>
+{% endblock %}
